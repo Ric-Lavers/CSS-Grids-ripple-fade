@@ -25,10 +25,14 @@ $(document).ready(function() {
     //find the id of the click object
     //**note** the pattern of divs is important!! a-z = rows & nums = cols
     var id = e.currentTarget.id;
+    // var id = $(this).attr('id');
     $(this).toggleClass('clear');
     revealAll(id);
   });
 });
+
+
+// strip string
 
 function revealAll(id){
   //useful for setting the revealed divs
@@ -38,7 +42,8 @@ function revealAll(id){
          'E' ,'F' ,'G' ,'H' ,'I' ,'J' ,'K' ,'L' ,'M' ,'N',
          'O' ,'P' ,'Q' ,'R' ,'S' ,'T' ,'U' ,'V' ,'W' ,'X','Y' ,'Z'];
   var r = row.indexOf(id[0]);
-  var col = parseInt(id[1]);
+  // var col = parseInt(id.slice[1,(id.length)]);
+  var col = parseInt(id.slice(1,id.lengt));
 
   var x=1;
   var used=[]
@@ -46,7 +51,7 @@ function revealAll(id){
 
   function loop(x){
     if (x<(rows)){
-        console.log("x "+x);
+        //console.log("x "+x);
         setTimeout(function(){
           for (i = -1*x; i <=1*x; i++){
             for(j = -1*x; j <=1*x; j++){
