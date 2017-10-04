@@ -34,14 +34,14 @@
 .grid{
   display: grid;
   grid-gap:5px;
-  grid-template-columns: repeat(4,100px);
-  grid-template-rows:    repeat(4,100px);
+  grid-template-columns: repeat(8,50px);
+  grid-template-rows:    repeat(8,50px);
 
 }
 .test{
   background-color: red;
-  height: 100px;
-  width:100px;
+  height: 50px;
+  width:50px;
 }
 
 .clear{
